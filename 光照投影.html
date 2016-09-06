@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0; padding:0;}
+		div{width:100px; height:100px; background:yellow; border-radius:50%; position: absolute; left:0; top:0; box-shadow:0 0 100px yellow;}
+		p{width:400px; height:200px; font-size:50px; text-shadow:0 0 0 #000; position:absolute; left:400px; top:200px; line-height:200px; text-align: center;}
+	</style>
+	<script>
+		window.onload=function(){
+			var oDiv=document.getElementsByTagName('div')[0];
+			var oP=document.getElementsByTagName('p')[0];
+			document.onmousemove=function(ev){
+				oDiv.style.left=ev.pageX-oDiv.offsetWidth/2+'px';
+				oDiv.style.top=ev.pageY-oDiv.offsetHeight/2+'px';
+				var X=oP.offsetLeft+oP.offsetWidth/2-ev.pageX;
+				var Y=oP.offsetTop+oP.offsetHeight/2-ev.pageY;
+				var a=Math.sqrt(X*X+Y*Y)/20;
+				oP.style.textShadow=X+'px'+' '+Y+'px '+a+'px #000';
+			};
+		};
+	</script>
+</head>
+<body>
+	<div></div>
+	<p>小霸王服务器</p>
+</body>
+</html>

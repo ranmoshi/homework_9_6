@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0; padding:0; list-style: none}
+		@keyframes demo{
+			form{top:0px;}
+			to{top:-200px;}
+		}
+		body{background:#000;}
+		li{width:400px; height:200px; background:red; float:left; margin:10px; border-radius:20px; position:relative; overflow: hidden;}
+		span{position:absolute; left:0; top:0; width:400px; height:200px; background:#ccc; font-size:22px; line-height:200px; text-align: center;}
+		span:hover{ animation:demo 3s linear infinite;}
+		.on1{background:url(img/dz.jpg) no-repeat;}
+		.on2{background:url(img/nq.jpg) no-repeat;}
+		.on3{background:url(img/abm.jpg) 0 -100px no-repeat;}
+		.on4{background:url(img/ez.jpg) no-repeat;}
+	</style>
+	
+</head>
+<body>
+	<ul>
+		<li class="on1"><span>克格莫</span></li>
+		<li class="on2"><span>好运姐</span></li>
+		<li class="on3"><span>卢锡安</span></li>
+		<li class="on4"><span>伊泽瑞尔</span></li>
+	</ul>
+</body>
+</html>
